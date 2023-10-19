@@ -29,7 +29,7 @@
                      alt="Planet Earth">
                   <div class="align-self-center media-body">
                      {% if current_user.is_authenticated %}
-                        <h5 class="mt-0">Welcome {{current_user.name}} - to travel! Select from the destinations below, to look at more information.</h5>
+                        <h5 class="mt-0">Welcome {{current_user.name}} - to travel! Select from the destinations below, to look at more information. Or, alternatively, take a seach aboove to find what you're looking for.</h5>
                      {% else %}
                         <h5 class="mt-0">Find the best destinations on earth</h5>
                         <p class="d-none d-sm-block">With the best prices, information and local knowledge. Login or Register now!</p>
@@ -45,7 +45,7 @@
             {% for destination in destinations %}
             <div class="card mx-3">
                <img class="card-img-top"
-                  src="{{ destination.image }}" alt="{{ destination.name }} picture" height="225">
+                  src="{{ destination.image }}" alt="{{ destination.name }} picture">
                <div class="card-body">
                   <h5 class="card-title">{{ destination.name }}</h5>
                   <p class="card-text">{{ destination.description }}</p>
